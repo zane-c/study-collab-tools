@@ -8,10 +8,11 @@ class Dashboard extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      message: 'React Starter Template',
+      openTool: 'None',
     };
   }
   render() {
+    const { openTool } = this.state;
     return (
       <div className={styles.container}>
         <div className={styles.header}>
@@ -19,7 +20,10 @@ class Dashboard extends React.Component {
         </div>
         <div className={styles.body}>
           <div className={styles.toolSelector}>
-            <Toolbar />
+            <Toolbar
+              selected={openTool}
+              onSelect={tool => this.setState({ openTool: tool })}
+            />
           </div>
           <div className={styles.dashboard}>
             Open a tool from the side bar
