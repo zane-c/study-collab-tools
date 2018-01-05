@@ -6,7 +6,7 @@ import { syncHistoryWithStore, routerReducer } from 'react-router-redux';
 import { createStore, applyMiddleware, combineReducers } from 'redux';
 
 import App from './components/app.jsx';
-import Welcome from './components/src/Welcome.jsx';
+import Dashboard from './components/src/Dashboard.jsx';
 import colorsMiddleware from './middleware/colors.js';
 import colorsReducer from './reducers/colors.js';
 
@@ -32,7 +32,8 @@ ReactDOM.render(
   <Provider store={store}>
     <Router history={history}>
       <Route path="/" component={App}>
-        <IndexRoute component={Welcome} />
+        <IndexRoute component={Dashboard} />
+        <Route path="/dashboard/:roomId" component={Dashboard} />
         <Route path="/:404" component={null} />
       </Route>
     </Router>

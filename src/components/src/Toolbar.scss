@@ -1,0 +1,59 @@
+@keyframes showText {
+    from { margin-left: -130px; }
+    to { margin-left: 0px; }
+}
+@keyframes hideText {
+    from { margin-left: 0px; }
+    to { margin-left: -130px; }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  height: 100%;
+  margin-left: -130px;
+  animation-name: hideText;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+
+  &:hover {
+    animation-name: showText;
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+    // -webkit-animation: showText 0.5s 1 both;
+    // -moz-animation: showText 0.5s 1 both;
+    // animation: showText 0.5s 1 both;
+  }
+}
+
+.tool {
+  padding-left: 15px;
+  color: white;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  //justify-content: center;
+  align-items: center;
+  &:hover {
+    background-color: rgba(255,255,255,0.25);
+  }
+}
+
+.toolName {
+  font-size: 20px;
+  width: 120px;
+}
+
+.toolIcon {
+  font-size: 25px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tool[data-selected=true] {
+  background: white;
+  color: #0fb8ad;
+}
