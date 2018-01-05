@@ -1,62 +1,52 @@
 .container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  height: 100%;
+  border-left: solid 4px white;
+  margin-right: -250px;
+  transition: margin-right 0.5s;
+}
+
+.container[data-open=true] {
+  margin-right: 0px;
+}
+
+.icons {
   cursor: pointer;
   height: 100%;
-  margin-right: -130px;
-}
-
-.video {
-  border-left: solid 4px white;
-  border-bottom: solid 4px white;
-  flex: 1;
-  color: white;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  transition: margin-left 0.5s;
-  margin-left: 0px;
-}
+  color: white;
+  font-size: 25px;
+  width: 50px;
 
-.video[data-open=true] {
-  background: white;
-  color: #2cb5e8;
-  margin-left: -130px;
+  &:hover {
+    background-color: rgba(255,255,255,0.15);
+  }
 }
 
 .chat {
-  border-left: solid 4px white;
-  border-top: solid 4px white;
-  margin-top: -4px;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+}
+
+.video {
+  display: flex;
   flex: 1;
-  color: white;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  transition: margin-left 0.5s;
-  margin-left: 0px;
-}
-
-.chat[data-open=true] {
-  background: white;
-  color: #2cb5e8;
-  margin-left: -130px;
-}
-
-.toolName {
-  font-size: 20px;
-  width: 120px;
-}
-
-.toolIcon {
-  font-size: 25px;
-  width: 50px;
-  height: 100%;
-  display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 75px;
+  color: white;
+}
 
-  &:hover {
-    background-color: rgba(255,255,255,0.25);
-  }
+.text {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
+  color: white;
 }

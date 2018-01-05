@@ -11,14 +11,12 @@ class Dashboard extends React.Component {
     this.state = {
       openTool: 'None',
       chatOpen: false,
-      videoOpen: false,
     };
   }
   render() {
     const {
       openTool,
       chatOpen,
-      videoOpen,
     } = this.state;
     return (
       <div className={styles.container}>
@@ -34,9 +32,7 @@ class Dashboard extends React.Component {
             Open a tool from the side bar
           </div>
           <Chatbar
-            videoOpen={videoOpen}
             chatOpen={chatOpen}
-            onOpenVideo={() => this.setState({ videoOpen: !videoOpen })}
             onOpenChat={() => this.setState({ chatOpen: !chatOpen })}
           />
         </div>
