@@ -10,7 +10,7 @@ easier, and more effective.
 npm install
 npm start
 ```
-## Then proceed to
+#### Then proceed to
 ```
 http://localhost:9090
 ```
