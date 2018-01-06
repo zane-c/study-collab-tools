@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import Codeshare from './Codeshare.jsx';
 import Chatbar from './Chatbar.jsx';
 import Toolbar from './Toolbar.jsx';
+import Writeshare from './Writeshare.jsx';
 import styles from './Dashboard.scss';
 
 
@@ -49,9 +50,7 @@ class Dashboard extends React.Component {
               <Codeshare />
             }
             {openTool === 'Writing' &&
-              <div className={styles.tool}>
-                Writing
-              </div>
+              <Writeshare />
             }
             {openTool === 'Drawing' &&
               <div className={styles.tool}>

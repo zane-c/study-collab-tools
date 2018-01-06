@@ -1,0 +1,38 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.toolbar {
+  height: 50px;
+  background: rgba(255, 255, 255, 0.95);
+  color: #1fc8db;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 5px;
+
+  svg {
+    padding: 8px;
+    border-radius: 3px;
+    cursor: pointer;
+    &:hover {
+      background: rgba(255, 255, 255, 0.9);
+    }
+  }
+}
+
+.document {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.95);
+  color: black;
+  padding: 50px;
+  overflow-y: auto;
+}
+
+.editor {
+  height: 100%;
+  -moz-appearance:none;
+  outline:0px none transparent;
+}
