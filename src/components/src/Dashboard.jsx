@@ -34,7 +34,7 @@ class Dashboard extends React.Component {
     return (
       <div className={styles.container}>
         <div className={styles.header}>
-          Study Space
+          Study Share
         </div>
         <div className={styles.body}>
           <Toolbar
