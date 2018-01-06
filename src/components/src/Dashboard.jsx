@@ -1,11 +1,7 @@
 import React from 'react';
 // import PropTypes from 'prop-types';
-import 'codemirror/mode/javascript/javascript';
-import 'codemirror/lib/codemirror.css';
-import 'codemirror/theme/material.css';
-
 import { connect } from 'react-redux';
-import CodeMirror from 'react-codemirror';
+import Codeshare from './Codeshare.jsx';
 import Chatbar from './Chatbar.jsx';
 import Toolbar from './Toolbar.jsx';
 import styles from './Dashboard.scss';
@@ -17,7 +13,6 @@ class Dashboard extends React.Component {
     this.state = {
       openTool: 'None',
       chatOpen: false,
-      code: '// Code\nvar x = 23;\n\n',
     };
     this.onOpenTool = this.onOpenTool.bind(this);
   }
@@ -33,7 +28,6 @@ class Dashboard extends React.Component {
     const {
       openTool,
       chatOpen,
-      code,
     } = this.state;
     return (
       <div className={styles.container}>
@@ -52,19 +46,7 @@ class Dashboard extends React.Component {
               </div>
             }
             {openTool === 'Coding' &&
-              <CodeMirror
-                value={code}
-                onChange={c => this.setState({ code: c })}
-                className={styles.cmContainer}
-                options={{
-                  lineWrapping: true,
-                  tabSize: 4,
-                  lineNumbers: true,
-                  mode: 'javascript',
-                  theme: 'material',
-                  viewportMargin: Infinity,
-                }}
-              />
+              <Codeshare />
             }
             {openTool === 'Writing' &&
               <div className={styles.tool}>

@@ -1,0 +1,24 @@
+:global .CodeMirror {
+  height: 100%;
+}
+
+:global .ReactCodeMirror {
+  flex: 1;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.selectors {
+  display: flex;
+  flex-direction: row;
+}
+
+:global .Select {
+  flex: 1;
+  z-index: 10;
+  padding-bottom: 5px;
+}
