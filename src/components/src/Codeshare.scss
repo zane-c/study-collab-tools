@@ -4,6 +4,7 @@
 
 :global .ReactCodeMirror {
   flex: 1;
+  overflow: -webkit-paged-y;
 }
 
 .container {

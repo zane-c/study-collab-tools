@@ -48,6 +48,7 @@ class Codeshare extends React.Component {
       <div className={styles.container}>
         <div className={styles.selectors}>
           <Select
+            clearable={false}
             name="form-field-name"
             value={language}
             onChange={this.changeLanguage}
@@ -61,6 +62,7 @@ class Codeshare extends React.Component {
             ]}
           />
           <Select
+            clearable={false}
             name="form-field-name"
             value={theme}
             onChange={this.changeTheme}
