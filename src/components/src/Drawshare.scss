@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.toolbar {
+
+}
+
+.canvas {
+  background: white;
+  width: 600px;
+  height: 600px;
+}
