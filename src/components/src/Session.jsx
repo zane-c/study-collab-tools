@@ -6,10 +6,10 @@ import Chatbar from './Chatbar.jsx';
 import Drawshare from './Drawshare.jsx';
 import Toolbar from './Toolbar.jsx';
 import Writeshare from './Writeshare.jsx';
-import styles from './Dashboard.scss';
+import styles from './Session.scss';
 
 
-class Dashboard extends React.Component {
+class Session extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -41,7 +41,7 @@ class Dashboard extends React.Component {
             selected={openTool}
             onSelect={this.onOpenTool}
           />
-          <div className={styles.dashboard} >
+          <div className={styles.session} >
             {openTool === 'None' &&
               <div className={styles.tool}>
                 Open a tool from the side bar
@@ -67,10 +67,10 @@ class Dashboard extends React.Component {
   }
 }
 
-Dashboard.defaultProps = {
+Session.defaultProps = {
 };
 
-Dashboard.propTypes = {
+Session.propTypes = {
 };
 
-export default connect(null)(Dashboard);
+export default connect(null)(Session);
